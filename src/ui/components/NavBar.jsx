@@ -29,31 +29,30 @@ export const NavBar = () => {
 
     return (
         <nav className="flex flex-col absolute w-full bg-[#EAE21E] divide-y top-0">
-            <div className="flex flex-row relative px-5 h-14 w-full items-center font-light">
+            <div className="flex flex-row h-12 w-full items-center font-light">
                 <Link
-                    className="font-extrabold mr-4"
+                    className="pl-2 font-semibold"
                     to="/"
                     onClick={menu && handleMenu}
                 >
-                    VictorLlaves
+                    VLLaves
                 </Link>
-                <div className="flex flex-row gap-x-2 basis-3/4">
+                <div className="flex flex-row px-2 w-full justify-end items-center gap-x-2">
                     <button 
-                        className="font-medium h-8 basis-2/6 rounded-sm text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
+                        className="h-8 px-4 rounded-full text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
                         onClick={onLogin}
                     >
                         Login
                     </button>
                     <button 
-                        className="font-medium h-8 basis-2/6 rounded-sm text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
+                        className="h-8 px-4 rounded-full text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
                         onClick={onRegistrarse}
                     >
                         Registrarse
                     </button>
-                </div>
-                <div>
+                    <div>
                     <button 
-                        className="absolute top-3 right-5"
+                        className="flex items-center"
                         onClick={handleMenu}
                     >
                         {
@@ -61,6 +60,8 @@ export const NavBar = () => {
                         }
                     </button>
                 </div>
+                </div>
+                
             </div>
             <NavBarList
                 handleMenu={handleMenu}

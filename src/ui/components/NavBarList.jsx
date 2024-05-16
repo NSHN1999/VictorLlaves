@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export const NavBarList = ({ handleMenu, menu}) => {
 
     return (
-        <ul className={`flex flex-col text-center divide-y ${ !menu ? 'hidden' : ''}`}>
+        <ul className={`flex flex-col divide-y ${ !menu ? 'hidden' : ''}`}>
             <NavLink 
                 className="flex"
                 to="/home"
