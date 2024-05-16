@@ -2,8 +2,10 @@
 export const ContactoPage = () => {
     return (
         <>
-            <h1 className="text-5xl">Contacto Page</h1>
+        <section className="h-screen">
+            <h1 className="text-5xl text-center">Contacto</h1>
             <hr/>
+        </section>
         </>
     );
 };

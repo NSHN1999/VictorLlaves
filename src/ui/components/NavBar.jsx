@@ -26,9 +26,9 @@ export const NavBar = () => {
             replace:true
         });
     };
-
+    
     return (
-        <nav className="flex flex-col absolute w-full bg-[#EAE21E] divide-y top-0">
+        <nav className="flex flex-col fixed w-full bg-[#EAE21E] divide-y top-0 shadow-[#131313] shadow-[0_1px_3px_2px]">
             <div className="flex flex-row h-12 w-full items-center font-light">
                 <Link
                     className="pl-2 font-semibold"
