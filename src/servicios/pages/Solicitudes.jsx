@@ -1,9 +1,8 @@
 
 export const Solicitudes = () => {
     return (
-        <section className="h-screen">
-            <h1 className="text-5xl text-center">SOLICITUDES</h1>
-            <hr/>
+        <section className="h-[600px] w-full bg-[#EAE21E] rounded-xl p-[10px]">
+            <h1 className="text-4xl text-center font-orbitron">Solicitudes</h1>
         </section>
     );
 };
