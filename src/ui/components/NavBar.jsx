@@ -1,30 +1,19 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { IconoMostrar } from "./IconoMostrar";
 import { IconoEsconder } from "./IconoEsconder";
 import { NavBarList } from "./NavBarList";
+import { AuthContext } from "../../auth/context";
+import { LoginRegisterNav } from "./LoginRegisterNav";
 
 export const NavBar = () => {
 
     const [ mostrarMenu, setMostrarMenu ] = useState(false);
+    const { logged , user } = useContext(AuthContext);
 
     const handleMenu = () => {
         setMostrarMenu(!mostrarMenu);
-    };
-
-    const navigate = useNavigate();
-
-    const onLogin = () => {
-        navigate("/login", {
-            replace: true
-        });
-    };
-
-    const onRegistrarse = () => {
-        navigate("/registro", {
-            replace:true
-        });
     };
     
     return (
@@ -38,30 +27,22 @@ export const NavBar = () => {
                     VLLaves
                 </Link>
                 <div className="flex flex-row px-2 w-full justify-end items-center gap-x-2">
-                    <button 
-                        className="h-8 px-4 rounded-full text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
-                        onClick={onLogin}
-                    >
-                        Login
-                    </button>
-                    <button 
-                        className="h-8 px-4 rounded-full text-[#EAE21E] bg-gradient-to-r from-red-700 to-red-800"
-                        onClick={onRegistrarse}
-                    >
-                        Registrarse
-                    </button>
+                    {
+                        ( logged ) 
+                        ? <h3 className="font-orbitron font-semibold">{user.name}</h3>
+                        : <LoginRegisterNav/>
+                    }
                     <div>
-                    <button 
-                        className="flex items-center"
-                        onClick={handleMenu}
-                    >
-                        {
-                            mostrarMenu ? <IconoEsconder/> : <IconoMostrar/>
-                        }
-                    </button>
-                </div>
-                </div>
-                
+                        <button 
+                            className="flex items-center"
+                            onClick={handleMenu}
+                        >
+                            {
+                                mostrarMenu ? <IconoEsconder/> : <IconoMostrar/>
+                            }
+                        </button>
+                    </div>
+                </div>    
             </div>
             <NavBarList
                 handleMenu={handleMenu}

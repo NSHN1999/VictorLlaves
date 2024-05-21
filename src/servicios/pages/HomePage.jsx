@@ -16,7 +16,7 @@ export const HomePage = () => {
             <h2 className="text-1xl text-center font-semibold text-red-700 font-orbitron">Servicio a domicilio</h2>
             <div className="p-[10px] pb-[40px] mt-[40px] bg-white rounded-xl shadow-lg">
                 <h2 className="1xl text-center h-auto py-[15px] text-neutral-700">SERVICIOS</h2>
-                <div className="grid grid-cols-2 gap-4 gap-y-5 text-sm font-extralight">
+                <div className="grid grid-cols-2 gap-4 gap-y-5 text-sm font-ligth">
                     <button className="px-4 py-[2px] rounded-full bg-green-900 text-white">
                         Cerrajeria
                     </button>
@@ -42,9 +42,9 @@ export const HomePage = () => {
                         Cerrajeria
                     </button>
                 </div>
-                <div className="flex justify-center content-center pt-[40px] font-extralight">
+                <div className="flex justify-center content-center pt-[40px] font-light">
                     <Link 
-                        className="px-4 py-[2px] bg-cyan-900 active:bg-cyan-700 text-white rounded-full"
+                        className="px-4 py-[2px] bg-cyan-600 active:bg-cyan-700 text-white rounded-full"
                         to="/solicitudes"    
                     >
                         Enviar solicitud
