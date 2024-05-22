@@ -13,10 +13,10 @@ export const NavBarList = ({ handleMenu, mostrarMenu}) => {
             </NavLink>
             <NavLink 
                 className={({isActive}) => `flex ${isActive? 'font-semibold' : ''}`}
-                to="/solicitudes"
+                to="/servicios"
                 onClick={handleMenu}
             >
-                    <p className="h-10 w-full text-center content-center">SOLICITUDES</p>
+                    <p className="h-10 w-full text-center content-center">SERVICIOS</p>
             </NavLink>
             <NavLink 
                 className={({isActive}) => `flex ${isActive? 'font-semibold' : ''}`}
