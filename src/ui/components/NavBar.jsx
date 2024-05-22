@@ -5,7 +5,7 @@ import { IconoMostrar } from "./IconoMostrar";
 import { IconoEsconder } from "./IconoEsconder";
 import { NavBarList } from "./NavBarList";
 import { AuthContext } from "../../auth/context";
-import { LoginRegisterNav } from "./LoginRegisterNav";
+import { LogoutButton } from "./LogoutButton";
 
 export const NavBar = () => {
 
@@ -30,8 +30,9 @@ export const NavBar = () => {
                     {
                         ( logged ) 
                         ? <h3 className="font-orbitron font-semibold">{user.name}</h3>
-                        : <LoginRegisterNav/>
+                        : ''
                     }
+                    <LogoutButton/>
                     <div>
                         <button 
                             className="flex items-center"
