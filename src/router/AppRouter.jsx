@@ -1,17 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 
 import { ServiciosRoute } from "../servicios/router/ServiciosRoute";
-import { LoginPage } from "../auth/pages"
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
+import { AuthRoutes } from "../auth/routes/AuthRoutes";
 
 export const AppRouter = () => {
     return (
         <>
             <Routes>
-                <Route path="login" element={
+                <Route path="/auth/*" element={
                     <PublicRoute>
-                        <LoginPage/>
+                        <AuthRoutes/>
                     </PublicRoute>
                 }/>
 

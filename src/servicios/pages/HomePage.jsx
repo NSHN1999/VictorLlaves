@@ -15,9 +15,9 @@ export const HomePage = () => {
                 </p>
             </div>
             <h2 className="text-1xl text-center font-semibold text-red-700 font-orbitron">Servicio a domicilio</h2>
-            <div className="p-[10px] pb-[40px] mt-[40px] bg-white rounded-xl shadow-xl shadow-black/35">
+            <div className="p-[10px] pb-[40px] mt-[40px] bg-white rounded-md shadow-[0px_px_5px_5px] shadow-[rgba(0,0,0,0.4)]">
                 <h2 className="1xl text-center h-auto py-[15px] text-neutral-700 font-medium">¿Tienes un problema con tu llave?</h2>
-                <p className="p-[10px] font-poppins text-neutral-700">
+                <p className="text-center p-[10px] font-poppins text-neutral-700">
                     Envíame una solicitud para mantener garantia de nuestro acuerdo.
                 </p>
                 <div className="flex justify-center content-center pt-[40px] font-light">
