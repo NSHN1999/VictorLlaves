@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
 import { useForm } from "../../hooks";
+import { AuthLayout } from "../Layout/AuthLayout";
 
 export const LoginPage = () => {
 
@@ -24,38 +25,36 @@ export const LoginPage = () => {
     };
 
     return (
-        <div className="h-screen w-full flex justify-center p-5 items-center bg-[#EAE21E]">
-            <form 
-                className="flex flex-col bg-white text-neutral-700 rounded-md w-full p-6 gap-4 shadow-[0px_px_5px_5px] shadow-[rgba(0,0,0,0.4)]"
-                onSubmit={onLogin}    
-            >
-                <h1 className="px-4 text-2xl">Login</h1>
+        <AuthLayout title="Login">
+            <form className="flex flex-col gap-4" onSubmit={onLogin}>
                 <input
                     type="text"
                     placeholder="Usuario"
-                    className="w-full px-4 py-[2px] border-neutral-400 border-2 rounded-md"
+                    className="form-input"
                     name="usuario"
                     onChange={onInputChange}
                 />
                 <input
                     type="password"
                     placeholder="Contraseña"
-                    className="w-full px-4 py-[2px] border-neutral-400 border-2 rounded-md"
+                    className="form-input"
                     name="password"
                     onChange={onInputChange}
                 />
-                <button 
-                    className="w-full px-4 py-[2px] bg-cyan-600 active:bg-cyan-700 text-white rounded-md"
-                    onClick={onLogin}    
-                >
-                    Login
-                </button>
-                <button 
-                    className="flex flex-row justify-center gap-1 w-full px-4 py-[2px] bg-cyan-600 active:bg-cyan-700 text-white rounded-md"
-                    onClick={onLogin}    
-                >
-                    Google
-                </button>
+                <div>
+                    <button 
+                        className="w-full h-9 px-4 mb-2 bg-cyan-800 active:bg-cyan-700 text-white rounded-sm"
+                        onClick={onLogin}    
+                    >
+                        Login
+                    </button>
+                    <button 
+                        className="w-full h-9 px-4 bg-cyan-800 active:bg-cyan-700 text-white rounded-sm"
+                        onClick={onLogin}    
+                    >
+                        Google
+                    </button>
+                </div>
                 <div
                     className="flex justify-end text-cyan-700"
                 >
@@ -66,6 +65,6 @@ export const LoginPage = () => {
                     </Link>
                 </div>
             </form>
-        </div>
+        </AuthLayout>
     );
 };

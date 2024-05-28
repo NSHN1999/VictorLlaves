@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 export const HomePage = () => {
 
     return (
-        <>
-        <section className="h-[600px] w-full bg-[#EAE21E] rounded-xl p-[10px]">
+        <section className="h-auto w-full bg-[#EAE21E] rounded-xl p-[10px] pb-[20px]">
             <h2 className="text-1xl text-center font-extrabold font-orbitron">CERRAJERÍA</h2>
             <h1 className="text-4xl text-center font-semibold font-orbitron">VíctorLlaves</h1>
             <div className="p-[10px] text-center text-sm">
@@ -20,9 +19,9 @@ export const HomePage = () => {
                 <p className="text-center p-[10px] font-poppins text-neutral-700">
                     Envíame una solicitud para mantener garantia de nuestro acuerdo.
                 </p>
-                <div className="flex justify-center content-center pt-[40px] font-light">
+                <div className="flex justify-center content-center pt-[30px] font-light">
                     <Link 
-                        className="px-4 py-[2px] bg-cyan-600 active:bg-cyan-700 text-white rounded-full shadow-xl shadow-cyan-600"
+                        className="px-4 py-2 bg-cyan-800 active:bg-cyan-700 text-white rounded-full"
                         to="/solicitud"    
                     >
                         Enviar solicitud
@@ -30,6 +29,5 @@ export const HomePage = () => {
                 </div>
             </div>
         </section>
-        </>
     );
 };
