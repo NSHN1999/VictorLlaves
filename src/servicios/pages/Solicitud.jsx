@@ -1,12 +1,61 @@
+import { Link, useNavigate } from "react-router-dom";
+
+import { InputForm } from "../components/InputForm";
 
 export const Solicitud = () => {
 
-    return (
-        <div className="h-[600px] w-full bg-[#EAE21E] rounded-xl p-[10px]">
-            <h1 className="text-4xl text-center font-orbitron">Solicitud</h1>
-            <form>
+    const navigate = useNavigate();
 
-            </form>
+    const onNewSolicitud = () => {
+        navigate('/');
+    }
+
+    return (
+        <div className="flex justify-center h-[100vh] w-full bg-[#EAE21E] py-7">
+            <div className="bg-white w-[85%] h-max p-[10px] rounded-md shadow-[0px_px_5px_5px] shadow-[rgba(0,0,0,0.4)]">
+                <h1 className="font-poppins text-4xl text-center text-neutral-700 font-light pb-[30px]">Solicitud</h1>
+                <form className="grid grid-cols-5 gap-4">
+                    <input
+                        className="form-input w-full bg-[rgba(0,0,0,0.0)] border-black col-span-6"
+                        type="text"
+                        placeholder="N° Teléfono"
+                        name="numero"
+                    />
+                    <input
+                        className="form-input w-full bg-[rgba(0,0,0,0.0)] border-black col-span-6"
+                        type="text"
+                        placeholder="Marca Vehiculo"
+                        name="marca"
+                    />
+                    <input
+                        className="form-input w-full bg-[rgba(0,0,0,0.0)] border-black col-span-6"
+                        type="text"
+                        placeholder="Año Vehículo"
+                        name="año"
+                        maxLength={4}
+                    />
+                    <input
+                        className="form-input w-full bg-[rgba(0,0,0,0.0)] border-black col-span-6"
+                        type="text"
+                        placeholder="Marca Vehiculo"
+                        name="marca"
+                    />
+
+                    <button 
+                        className="text-xs col-start-2 col-end-4 px-4 py-1 bg-cyan-800 active:bg-cyan-700 text-white rounded-full"
+                        onClick={onNewSolicitud}    
+                    >
+                        Volver
+                    </button>
+
+                    <button 
+                        className="text-xs col-start-4 col-end-6 px-4 py-1 bg-cyan-800 active:bg-cyan-700 text-white rounded-full"
+                        onClick={onNewSolicitud}    
+                    >
+                        Crear Solicitud
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };
