@@ -17,7 +17,7 @@ export const NavBar = () => {
     };
     
     return (
-        <nav className="flex flex-col fixed w-full bg-[#EAE21E] divide-y divide-black top-0 shadow-[#131313] shadow-[0_1px_3px_2px]">
+        <nav className="z-40 flex flex-col fixed w-full bg-[#EAE21E] divide-y divide-black top-0 shadow-[#131313] shadow-[0_1px_3px_2px]">
             <div className="flex flex-row h-12 w-full items-center font-light">
                 <Link
                     className="pl-2 font-semibold"
