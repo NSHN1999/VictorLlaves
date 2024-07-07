@@ -8,7 +8,7 @@ export const Tab = () => {
             aria-label="tabs" 
             className="z-0 relative grid grid-cols-3 h-12 rounded-full bg-gray-900/20 items-center overflow-hidden shadow-2xl shadow-900/20 transition"
         >
-            <div className="absolute indicator my-auto h-10 top-0 bottom-0 left-0 w-[100px] rounded-full bg-white shadow-md"></div>
+            <div className="absolute right-[10px] indicator my-auto h-10 top-0 bottom-0 left-0 w-[100px] rounded-full bg-white shadow-md"></div>
             <button
                 role="tab"
                 aria-selected="true"

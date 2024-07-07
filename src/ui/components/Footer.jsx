@@ -1,9 +1,12 @@
 
 export const Footer = () => {
+
+    let añoActual = new Date().getFullYear();
+
     return (
-        <footer className='flex flex-col px-3 pb-[40px] pt-[1px] w-full h-auto bg-[#121212] text-zinc-300'>
+        <footer className='flex flex-col px-3 pb-[40px] pt-[10px] w-full h-auto bg-[#121212] text-zinc-300'>
             <h1 className="text-sm font-light text-center">
-                &copy;VictorLlaves
+                &copy; {`2018 - ${añoActual} `}Victor Llaves
             </h1>
             <div className="text-center text-xm p-[5px]">
                 <p>Para mas información contacteme por redes sociales.</p>
